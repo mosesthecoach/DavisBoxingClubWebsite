@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Davis Boxing Club – A community boxing club in Omaha empowering youth through discipline, fitness, and mentorship."
+    />
+    <meta name="keywords" content="boxing club, Omaha, youth program, nonprofit, training" />
+    <title>Davis Boxing Club</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --dbc-yellow: #ffd75e;
+        --dbc-black: #000;
+        --dbc-white: #fff;
+        --dbc-section-gap: clamp(3.5rem, 6vw, 5rem);
+        --dbc-card-radius: 1.5rem;
+        --dbc-container-max: 960px;
+        --dbc-container-pad: clamp(1.25rem, 4vw, 2rem);
+        --dbc-body-font: 'Lato', sans-serif;
+        --dbc-heading-font: 'Oswald', sans-serif;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: var(--dbc-body-font);
+        background-color: var(--dbc-black);
+        color: var(--dbc-white);
+        margin: 0;
+        line-height: 1.7;
+        font-size: clamp(16px, 1.9vw, 18px);
+      }
+
+      p {
+        margin: 0;
+      }
+
+      section {
+        scroll-margin-top: 5.5rem;
+      }
+
+      .container,
+      .container-fluid {
+        width: min(var(--dbc-container-max), 100%);
+        margin: 0 auto;
+        padding-inline: var(--dbc-container-pad);
+        box-sizing: border-box;
+      }
+
+      main.container {
+        padding-block: clamp(2.5rem, 5vw, 3.5rem);
+        display: grid;
+        gap: var(--dbc-section-gap);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: var(--dbc-heading-font);
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      a {
+        color: var(--dbc-yellow);
+      }
+
+      a:hover,
+      a:focus {
+        color: var(--dbc-yellow);
+      }
+
+      nav {
+        background-color: rgba(0, 0, 0, 0.85);
+        padding-block: 0.75rem;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        backdrop-filter: blur(6px);
+      }
+
+      nav .nav-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        gap: clamp(0.75rem, 2vw, 1.4rem);
+      }
+
+      nav li strong {
+        font-size: clamp(1.05rem, 2.4vw, 1.35rem);
+        letter-spacing: 0.12em;
+      }
+
+      nav a {
+        color: var(--dbc-white);
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        font-size: clamp(0.78rem, 1.7vw, 0.95rem);
+        transition: color 0.2s ease;
+      }
+
+      nav a:hover,
+      nav a:focus {
+        color: var(--dbc-yellow);
+      }
+
+      .hero {
+        position: relative;
+        text-align: center;
+        padding: clamp(3.5rem, 8vw, 6rem) clamp(1.75rem, 4vw, 3rem);
+        border-radius: var(--dbc-card-radius);
+        overflow: hidden;
+        margin-top: clamp(1.5rem, 4vw, 2.5rem);
+        background-color: #121212;
+      }
+
+      .hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: url('https://sdmntprwestus.oaiusercontent.com/files/00000000-a944-7230-8765-b553b384f2ae/raw?se=2025-11-10T19%3A53%3A29Z&sp=r&sv=2024-08-04&sr=b&scid=eaed167d-026d-44f7-b4f8-458230442295&skoid=ea1de0bc-0467-43d6-873a-9a5cf0a9f835&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-11-10T09%3A55%3A09Z&ske=2025-11-11T09%3A55%3A09Z&sks=b&skv=2024-08-04&sig=31cKy/s92LKst2Zy3FDEsJUrvkdl7avl7ilu2lxepMI%3D');
+        background-size: cover;
+        background-position: center;
+        filter: brightness(0.35);
+        z-index: 0;
+      }
+
+      .hero > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.4rem, 5vw, 3.4rem);
+        margin-bottom: clamp(0.75rem, 2vw, 1.2rem);
+      }
+
+      .hero p {
+        font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+        margin: 0 auto clamp(1.75rem, 3vw, 2.25rem);
+        max-width: 42ch;
+      }
+
+      .button-group {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: clamp(0.75rem, 2vw, 1.25rem);
+        flex-wrap: wrap;
+      }
+
+      .btn-yellow {
+        background-color: var(--dbc-yellow);
+        color: var(--dbc-black);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        padding: clamp(0.75rem, 1.6vw, 0.95rem) clamp(1.35rem, 3vw, 1.85rem);
+        font-size: clamp(0.82rem, 1.6vw, 0.98rem);
+        border-radius: 999px;
+      }
+
+      .btn-yellow:hover,
+      .btn-yellow:focus {
+        filter: brightness(1.1);
+      }
+
+      .quote-section {
+        background-color: rgba(255, 255, 255, 0.04);
+        padding: clamp(2.25rem, 5vw, 3rem);
+        border-radius: 1.25rem;
+        text-align: center;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+      }
+
+      blockquote {
+        margin: 0 auto clamp(1.75rem, 3vw, 2.4rem);
+        font-size: clamp(1.2rem, 2.3vw, 1.6rem);
+        font-style: italic;
+        max-width: 40rem;
+      }
+
+      .grid-buttons {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: clamp(0.85rem, 2vw, 1.25rem);
+      }
+
+      .grid-buttons a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: clamp(0.7rem, 1.6vw, 0.9rem) 1rem;
+        background-color: var(--dbc-yellow);
+        color: var(--dbc-black);
+        border-radius: 999px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-size: clamp(0.78rem, 1.5vw, 0.92rem);
+        transition: filter 0.2s ease;
+      }
+
+      .grid-buttons a:hover,
+      .grid-buttons a:focus {
+        filter: brightness(1.08);
+      }
+
+      .subscribe-section {
+        padding: clamp(3rem, 8vw, 4.75rem) 0;
+        margin-top: var(--dbc-section-gap);
+      }
+
+      .subscribe-card {
+        background-color: rgba(0, 0, 0, 0.65);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: var(--dbc-card-radius);
+        padding: clamp(2.25rem, 5vw, 3rem);
+        display: grid;
+        gap: clamp(1.5rem, 3vw, 2rem);
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+      }
+
+      .subscribe-card hgroup {
+        display: grid;
+        gap: 0.35rem;
+      }
+
+      .subscribe-card h2 {
+        font-size: clamp(1.6rem, 3vw, 2rem);
+        margin: 0;
+      }
+
+      .subscribe-card h3 {
+        font-size: clamp(1.05rem, 2vw, 1.25rem);
+        font-weight: 400;
+        text-transform: none;
+        letter-spacing: normal;
+        margin: 0;
+        color: rgba(255, 255, 255, 0.75);
+      }
+
+      .subscribe-card form.grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: clamp(0.9rem, 2vw, 1.35rem);
+      }
+
+      .subscribe-card input,
+      .subscribe-card button {
+        min-height: 3rem;
+        border-radius: 999px;
+      }
+
+      .subscribe-card button[type='submit'] {
+        background-color: var(--dbc-yellow);
+        color: var(--dbc-black);
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-size: clamp(0.85rem, 1.6vw, 1rem);
+        padding: clamp(0.85rem, 1.6vw, 1rem) clamp(1.4rem, 3vw, 2rem);
+        border: none;
+        transition: filter 0.2s ease;
+      }
+
+      .subscribe-card button[type='submit']:hover,
+      .subscribe-card button[type='submit']:focus {
+        filter: brightness(1.08);
+      }
+
+      footer {
+        padding: clamp(2.2rem, 6vw, 3.25rem) 0;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.68);
+        font-size: clamp(0.82rem, 1.4vw, 0.92rem);
+        margin-top: var(--dbc-section-gap);
+      }
+
+      footer a {
+        color: rgba(255, 255, 255, 0.85);
+      }
+
+      footer span {
+        margin: 0 0.45rem;
+        color: rgba(255, 255, 255, 0.35);
+      }
+
+      @media (max-width: 720px) {
+        section {
+          scroll-margin-top: 4.5rem;
+        }
+
+        nav .nav-wrapper {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.85rem;
+        }
+
+        nav ul {
+          flex-wrap: wrap;
+          gap: 0.65rem;
+        }
+
+        nav li:first-child {
+          width: 100%;
+          text-align: left;
+        }
+
+        nav li strong {
+          font-size: 1.15rem;
+        }
+
+        .hero {
+          margin-top: 1rem;
+          border-radius: 1rem;
+          padding: clamp(2.5rem, 10vw, 4rem) clamp(1.2rem, 5vw, 2rem);
+        }
+
+        .hero h1 {
+          font-size: clamp(2.1rem, 8vw, 2.6rem);
+        }
+
+        .hero p {
+          font-size: clamp(1rem, 4vw, 1.18rem);
+        }
+
+        .grid-buttons {
+          grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        }
+
+        .subscribe-card {
+          padding: clamp(1.75rem, 8vw, 2.5rem);
+        }
+
+        .subscribe-card form.grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="container nav-wrapper">
+        <ul>
+          <li><strong>Davis Boxing Club</strong></li>
+        </ul>
+        <ul>
+          <li><a href="#get-involved">Get Involved</a></li>
+          <li><a href="#donate">Donate</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#about">About Us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container">
+      <section class="hero">
+        <h1>Fight with Purpose</h1>
+        <p>A community boxing club for youth and future champions.</p>
+        <div class="button-group">
+          <a class="btn-yellow" role="button" href="#get-involved">Join the Club</a>
+          <a class="btn-yellow" role="button" href="#donate">Support the Mission</a>
+        </div>
+      </section>
+
+      <section class="quote-section" id="about">
+        <blockquote>
+          “At Davis Boxing Club, we believe boxing builds more than athletes — it builds
+          character, confidence, and community.”
+        </blockquote>
+        <div class="grid-buttons">
+          <a href="#get-involved" role="button">Get Involved</a>
+          <a href="#donate" role="button">Donate</a>
+          <a href="#programs" role="button">Programs</a>
+          <a href="#about" role="button">About Us</a>
+        </div>
+      </section>
+    </main>
+
+    <section aria-label="Newsletter sign-up" class="subscribe-section" id="get-involved">
+      <div class="container">
+        <article class="subscribe-card">
+          <hgroup>
+            <h2>Stay Connected</h2>
+            <h3>Join our newsletter for updates and events.</h3>
+          </hgroup>
+          <form class="grid" action="/subscribe" method="POST">
+            <input
+              type="text"
+              id="firstname"
+              name="firstname"
+              placeholder="Your Name"
+              aria-label="First name"
+              required
+            />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Your Email"
+              aria-label="Email"
+              required
+            />
+            <button type="submit">Subscribe</button>
+          </form>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <small>
+          <a href="#">© 2025 Davis Boxing Club | Omaha, Nebraska</a>
+          <span aria-hidden="true">•</span>
+          <a href="#">A 501(c)(3) Nonprofit | EIN: [TBD]</a>
+          <span aria-hidden="true">•</span>
+          <a href="mailto:info@davisboxingclub.org">info@davisboxingclub.org</a>
+        </small>
+      </div>
+    </footer>
+  </body>
+</html>
