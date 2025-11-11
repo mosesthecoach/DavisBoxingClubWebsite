@@ -5,316 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Davis Boxing Club – A community boxing club in Omaha empowering youth through discipline, fitness, and mentorship."
+      content="Davis Boxing Club is a community-centered boxing gym in Omaha, Nebraska empowering youth and adults to fight with purpose."
     />
-    <meta name="keywords" content="boxing club, Omaha, youth program, nonprofit, training" />
-    <title>Davis Boxing Club</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
-    />
+    <title>Davis Boxing Club | Fight with Purpose</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <style>
-      :root {
-        --dbc-yellow: #ffd75e;
-        --dbc-black: #000;
-        --dbc-white: #fff;
-      }
-
-      body {
-        font-family: 'Lato', sans-serif;
-        background-color: var(--dbc-black);
-        color: var(--dbc-white);
-        margin: 0;
-      }
-
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: 'Oswald', sans-serif;
-        letter-spacing: 0.04em;
-      }
-
-      a {
-        color: var(--dbc-yellow);
-      }
-
-      nav {
-        background-color: rgba(0, 0, 0, 0.8);
-        padding: 1rem 0;
-        position: sticky;
-        top: 0;
-        z-index: 10;
-      }
-
-      nav .nav-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1.5rem;
-        flex-wrap: wrap;
-      }
-
-      nav ul {
-        display: flex;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        gap: 1rem;
-      }
-
-      nav a {
-        color: var(--dbc-white);
-        text-transform: uppercase;
-        font-weight: 700;
-        letter-spacing: 0.08em;
-        font-size: 0.9rem;
-      }
-
-      nav a:hover,
-      nav a:focus {
-        color: var(--dbc-yellow);
-      }
-
-      .hero {
-        position: relative;
-        text-align: center;
-        padding: clamp(4rem, 10vw, 7rem) 1.5rem;
-        border-radius: 1.5rem;
-        overflow: hidden;
-        margin-top: 2rem;
-        background-color: #101010;
-      }
-
-      .hero::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background-image: url('https://sdmntprwestus.oaiusercontent.com/files/00000000-a944-7230-8765-b553b384f2ae/raw?se=2025-11-10T19%3A53%3A29Z&sp=r&sv=2024-08-04&sr=b&scid=eaed167d-026d-44f7-b4f8-458230442295&skoid=ea1de0bc-0467-43d6-873a-9a5cf0a9f835&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-11-10T09%3A55%3A09Z&ske=2025-11-11T09%3A55%3A09Z&sks=b&skv=2024-08-04&sig=31cKy/s92LKst2Zy3FDEsJUrvkdl7avl7ilu2lxepMI%3D');
-        background-size: cover;
-        background-position: center;
-        filter: brightness(0.4);
-        z-index: 0;
-      }
-
-      .hero > * {
-        position: relative;
-        z-index: 1;
-      }
-
-      .hero h1 {
-        font-size: clamp(2.5rem, 5vw, 4rem);
-        margin-bottom: 1rem;
-      }
-
-      .hero p {
-        font-size: clamp(1.15rem, 2.5vw, 1.5rem);
-        margin-bottom: 2rem;
-      }
-
-      .button-group {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        flex-wrap: wrap;
-      }
-
-      .btn-yellow {
-        background-color: var(--dbc-yellow);
-        color: var(--dbc-black);
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-      }
-
-      .btn-yellow:hover,
-      .btn-yellow:focus {
-        filter: brightness(1.1);
-      }
-
-      .quote-section {
-        margin-top: 3rem;
-        background-color: rgba(255, 255, 255, 0.04);
-        padding: 2.5rem;
-        border-radius: 1.25rem;
-        text-align: center;
-      }
-
-      blockquote {
-        margin: 0 auto 2rem;
-        font-size: clamp(1.2rem, 2.3vw, 1.6rem);
-        font-style: italic;
-        max-width: 45rem;
-      }
-
-      .grid-buttons {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-        gap: 1rem;
-      }
-
-      .grid-buttons a {
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0.85rem 1rem;
-        background-color: var(--dbc-yellow);
-        color: var(--dbc-black);
-        border-radius: 999px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-      }
-
-      .subscribe-section {
-        padding: 4rem 0;
-      }
-
-      .subscribe-card {
-        background-color: rgba(0, 0, 0, 0.65);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 1.25rem;
-        padding: 2.5rem;
-      }
-
-      .subscribe-card button[type='submit'] {
-        background-color: var(--dbc-yellow);
-        color: var(--dbc-black);
-        border-radius: 999px;
-        font-weight: 700;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-      }
-
-      footer {
-        padding: 2rem 0 3rem;
-        text-align: center;
-        color: rgba(255, 255, 255, 0.7);
-        font-size: 0.95rem;
-      }
-
-      footer a {
-        color: rgba(255, 255, 255, 0.85);
-      }
-
-      footer span {
-        margin: 0 0.5rem;
-        color: rgba(255, 255, 255, 0.4);
-      }
-
-      @media (max-width: 720px) {
-        nav .nav-wrapper {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-
-        nav ul {
-          flex-wrap: wrap;
-          gap: 0.75rem;
-        }
-
-        nav li:first-child {
-          width: 100%;
-          text-align: left;
-        }
-
-        nav li strong {
-          font-size: 1.25rem;
-        }
-
-        .hero {
-          margin-top: 1rem;
-          border-radius: 1rem;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav>
-      <div class="container nav-wrapper">
-        <ul>
-          <li><strong>Davis Boxing Club</strong></li>
-        </ul>
-        <ul>
-          <li><a href="#get-involved">Get Involved</a></li>
-          <li><a href="#donate">Donate</a></li>
-          <li><a href="#programs">Programs</a></li>
-          <li><a href="#about">About Us</a></li>
-        </ul>
+    <header class="site-header">
+      <div class="nav-container">
+        <a class="brand" href="index.html">Davis Boxing Club</a>
+        <nav aria-label="Primary navigation">
+          <ul>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="get-involved.html">Get Involved</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="gallery.html">Gallery &amp; Impact</a></li>
+            <li><a href="news.html">News &amp; Events</a></li>
+          </ul>
+        </nav>
       </div>
-    </nav>
+    </header>
 
-    <main class="container">
+    <main>
       <section class="hero">
         <h1>Fight with Purpose</h1>
         <p>A community boxing club for youth and future champions.</p>
         <div class="button-group">
-          <a class="btn-yellow" role="button" href="#get-involved">Join the Club</a>
-          <a class="btn-yellow" role="button" href="#donate">Support the Mission</a>
+          <a class="btn btn-yellow" href="get-involved.html">Join the Club</a>
+          <a class="btn btn-outline" href="donate.html">Support the Mission</a>
         </div>
       </section>
 
-      <section class="quote-section" id="about">
-        <blockquote>
-          “At Davis Boxing Club, we believe boxing builds more than athletes — it builds
-          character, confidence, and community.”
-        </blockquote>
-        <div class="grid-buttons">
-          <a href="#get-involved" role="button">Get Involved</a>
-          <a href="#donate" role="button">Donate</a>
-          <a href="#programs" role="button">Programs</a>
-          <a href="#about" role="button">About Us</a>
+      <section>
+        <h2 class="section-heading">Mission Snapshot</h2>
+        <p class="section-intro">
+          At Davis Boxing Club, we believe boxing builds more than athletes — it
+          builds character, confidence, and community.
+        </p>
+        <div class="quote-block">
+          Empowering youth and underserved communities in Omaha, Nebraska through
+          boxing — teaching discipline, confidence, awareness, and resilience that
+          last a lifetime.
+        </div>
+        <div class="quick-links" aria-label="Quick access links">
+          <a href="get-involved.html">Get Involved</a>
+          <a href="donate.html">Donate</a>
+          <a href="programs.html">Programs</a>
+          <a href="about.html">About Us</a>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-heading">Why Davis Boxing Club?</h2>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Community Impact</h3>
+            <p>
+              Free and accessible training programs for Omaha youth, breaking
+              down financial barriers to safe, structured mentorship.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Holistic Growth</h3>
+            <p>
+              Discipline, respect, and resilience are built into every round —
+              helping athletes succeed in the ring and in life.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Inclusive Training</h3>
+            <p>
+              Programs designed for all ages, genders, and abilities with coaches
+              committed to meeting athletes where they are.
+            </p>
+          </article>
         </div>
       </section>
     </main>
 
-    <section aria-label="Newsletter sign-up" class="subscribe-section" id="get-involved">
-      <div class="container">
-        <article class="subscribe-card">
-          <hgroup>
-            <h2>Stay Connected</h2>
-            <h3>Join our newsletter for updates and events.</h3>
-          </hgroup>
-          <form class="grid" action="/subscribe" method="POST">
-            <input
-              type="text"
-              id="firstname"
-              name="firstname"
-              placeholder="Your Name"
-              aria-label="First name"
-              required
-            />
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Your Email"
-              aria-label="Email"
-              required
-            />
-            <button type="submit">Subscribe</button>
-          </form>
-        </article>
-      </div>
-    </section>
-
-    <footer>
-      <div class="container">
-        <small>
-          <a href="#">© 2025 Davis Boxing Club | Omaha, Nebraska</a>
-          <span aria-hidden="true">•</span>
-          <a href="#">A 501(c)(3) Nonprofit | EIN: [TBD]</a>
-          <span aria-hidden="true">•</span>
-          <a href="mailto:info@davisboxingclub.org">info@davisboxingclub.org</a>
-        </small>
-      </div>
+    <footer class="site-footer">
+      <small>
+        <span>© 2025 Davis Boxing Club | Omaha, Nebraska</span>
+        <span>Davis Boxing Club is a 501(c)(3) nonprofit organization. EIN: [TBD]</span>
+        <a href="mailto:info@davisboxingclub.org">info@davisboxingclub.org</a>
+      </small>
     </footer>
   </body>
 </html>
